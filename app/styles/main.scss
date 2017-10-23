@@ -1,0 +1,265 @@
+// bower:scss
+// endbower
+@import 'variables';
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: $grey;
+  color: $black;
+  padding: 0.2em 0;
+}
+
+body {
+  font-family: 'Anonymous Pro', monospace;
+  color: $darkGrey;
+  background: url('../images/background.png');
+  text-transform: uppercase;
+}
+
+hr {
+  background: url('../images/dashed-lines.png');
+  background-size: cover;
+  height: 7px;
+  border: none;
+  margin: 30px 0;
+
+  @media (max-width: $mobile) {
+    margin: 20px 0;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 0.9em;
+}
+p {
+  font-size: 0.8em;
+  margin: 10px 0;
+}
+
+.headerImage {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: left;
+  direction: ltr;
+  line-height: 0;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -130px;
+  left: calc(50% - 100px);
+  background: url('../images/logo.png');
+  background-size: contain;
+
+  &.animate {
+    animation: spin 2s infinite linear;
+  }
+}
+.ticket {
+  position: relative;
+  background: url('../images/background-ticket.png');
+  border: solid 20px $white;
+  margin: 150px auto 50px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+  font-size: 1em;
+  padding: 100px 20px 30px;
+
+  @media (max-width: $mobile) {
+    border-width: 10px;
+    margin: 150px auto 20px;
+  }
+}
+.reset-button {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 0.6em;
+  background: $darkGrey;
+  color: $white;
+  padding: 5px 8px;
+
+  @media (max-width: $mobile) {
+    position: static;
+    width: 70px;
+    margin: 20px auto 0;
+  }
+}
+
+.numbers-list {
+  li {
+    display: inline-block;
+    width: 50px;
+    font-size: 1.6em;
+    font-weight: bold;
+
+    @media (max-width: $mobile) {
+      width: 30px;
+      font-size: 1.4em;
+    }
+  }
+}
+
+.input-numbers-container {
+  .input-list {
+    input {
+      border: none;
+      outline: none;
+      width: 50px;
+      line-height: 40px;
+      font-size: 1.6em;
+      text-align: center;
+      font-weight: bold;
+
+      @media (max-width: $tablet) {
+        width: 40px;
+        line-height: 30px;
+      }
+      @media (max-width: $mobile) {
+        width: 25px;
+        line-height: 20px;
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  .numbers-error {
+    display: none;
+    background: red;
+    color: $white;
+    width: 250px;
+    margin: 20px auto 0;
+    padding: 4px 7px;
+  }
+  .calculate-button {
+    background: $darkGrey;
+    padding: 10px;
+    color: $white;
+    font-size: 0.8em;
+    width: 160px;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}
+
+.calculating-container {
+  display: none;
+}
+.results-container {
+  display: none;
+}
+.looser-container {
+  display: none;
+  position: relative;
+  padding-top: 120px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: calc(50% - 65px); top: 0;
+    width: 130px;
+    height: 130px;
+    background: url('../images/no.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 100px;
+
+    &:before {
+      width: 100px;
+      height: 100px;
+      left: calc(50% - 50px);
+    }
+  }
+
+  .loosing-amount {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
+.winnings-container {
+  display: none;
+  position: relative;
+  padding-top: 130px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: calc(50% - 150px); top: 0;
+    width: 300px;
+    height: 120px;
+    background: url('../images/yes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 90px;
+
+    &:before {
+      width: 200px;
+      height: 80px;
+      left: calc(50% - 100px);
+    }
+  }
+
+  .winnings-total {
+    display: inline-block;
+    background: $darkGrey;
+    color: $white;
+    font-weight: bold;
+    font-size: 1.6em;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+
+    @media (max-width: $mobile) {
+      font-size: 1.3em;
+    }
+  }
+  .winnings-table {
+    margin: 0 auto;
+    font-size: 0.7em;
+    width: 70%;
+
+    thead {
+      line-height: 40px;
+    }
+    td, th {
+      text-align: left;
+
+      &:nth-of-type(2) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.lucky-dips {
+  display: none;
+  width: 70%;
+  margin: 20px auto 0;
+  font-size: 0.7em;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}

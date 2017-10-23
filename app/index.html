@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Check if you luck numbers would have won any lottery draws.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lottery check</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700" rel="stylesheet">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="ticket">
+      <h1 class="headerImage">Lotto check</h1>
+      <div class="reset-button">Try again?</div>
+      <hr>
+      <div class="input-numbers-container">
+        <h3>Enter Numbers</h3>
+        <div class="input-list">
+          <input type="text" pattern="[0-9]">
+          <input type="text" pattern="[0-9]">
+          <input type="text" pattern="[0-9]">
+          <input type="text" pattern="[0-9]">
+          <input type="text" pattern="[0-9]">
+          <input type="text" pattern="[0-9]">
+          <input type="text" pattern="[0-9]">
+        </div>
+        <p class="numbers-error">Numbers between 1 and 59, please.</p>
+        <div class="calculate-button disabled">Calculate</div>
+      </div>
+      <div class="calculating-container">
+        <h3>Numbers</h3>
+        <ul class="numbers-list"></ul>
+        <hr>
+        <h3>Calculating</h3>
+        <p>This mate take a while, we are looking over the past 20 years to find if you would have been as rich as Kim Kardashian&apos;s backside</p>
+        <hr>
+      </div>
+      <div class="results-container">
+        <h3>Numbers</h3>
+        <ul class="numbers-list"></ul>
+        <hr>
+        <h3>Results</h3>
+        <div class="winnings-container">
+          <p>You would have won</p>
+          <div class="winnings-total"></div>
+          <table class="winnings-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <p class="lucky-dips">You would&apos;ve also won <span></span> lucky dips.</p>
+        </div>
+        <div class="looser-container">
+          <p>You would have won</p>
+          <p class="loosing-amount">£0</p>
+          <p>But don&apos;t worry, you&apos;re not alone!</p>
+          <p class="lucky-dips">However, you would&apos;ve won <span></span> lucky dips.</p>
+        </div>
+        <hr>
+      </div>
+    </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/babel-polyfill/browser-polyfill.js"></script>
+    <script src="/bower_components/fetch/fetch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
