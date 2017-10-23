@@ -1,3 +1,3 @@
-Loto check was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+Loto check was bootstrapped with [Yeoman Webapp generator](https://github.com/yeoman/generator-webapp#readme).
 
 Run `npm install && bower install` to install all dependencies and `gulp serve` to start local server.
